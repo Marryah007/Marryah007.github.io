@@ -21,8 +21,9 @@ body {
     line-height: 1.6;
 }
 
+/* HEADER */
 header {
-    background: #ffffff;
+    background: rgba(255,255,255,0.97);
     padding: 18px 6%;
     display: flex;
     justify-content: space-between;
@@ -36,22 +37,31 @@ header {
 .logo {
     font-size: 22px;
     font-weight: 800;
-    color: #6c3df5;
+    color: #6635e8;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
 }
 
 nav a {
-    margin-left: 18px;
     text-decoration: none;
     color: #222;
     font-weight: 600;
 }
 
+nav a:hover {
+    color: #6635e8;
+}
+
+/* HERO */
 .hero {
     min-height: 88vh;
     display: flex;
     align-items: center;
     padding: 70px 7%;
-    background: linear-gradient(135deg, #f3edff, #ffffff, #e9f4ff);
+    background: linear-gradient(135deg, #f2ebff, #ffffff, #eaf5ff);
 }
 
 .hero-content {
@@ -60,34 +70,34 @@ nav a {
 
 .badge {
     display: inline-block;
-    background: #e8ddff;
-    color: #6134d8;
-    padding: 8px 16px;
+    background: #e8dcff;
+    color: #6032d5;
+    padding: 9px 18px;
     border-radius: 30px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .hero h1 {
-    font-size: clamp(42px, 8vw, 76px);
+    font-size: clamp(44px, 8vw, 78px);
     line-height: 1.05;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .hero h1 span {
-    color: #6c3df5;
+    color: #6b35ee;
 }
 
 .hero p {
     font-size: 20px;
     max-width: 700px;
     color: #555;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 
 .btn {
     display: inline-block;
-    padding: 14px 24px;
+    padding: 15px 25px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
@@ -96,15 +106,17 @@ nav a {
 }
 
 .primary {
-    background: #6c3df5;
+    background: #6b35ee;
     color: white;
 }
 
 .secondary {
-    border: 2px solid #6c3df5;
-    color: #6c3df5;
+    border: 2px solid #6b35ee;
+    color: #6b35ee;
+    background: white;
 }
 
+/* SECTIONS */
 section {
     padding: 80px 7%;
 }
@@ -123,6 +135,7 @@ section {
     color: #666;
 }
 
+/* ABOUT */
 .about {
     background: white;
 }
@@ -131,20 +144,49 @@ section {
     max-width: 900px;
     margin: auto;
     text-align: center;
-    font-size: 18px;
+}
+
+.about-box p {
+    font-size: 19px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-highlight {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.highlight {
+    padding: 25px;
+    background: #f8f5ff;
+    border-radius: 18px;
+}
+
+.highlight strong {
+    display: block;
+    font-size: 30px;
+    color: #6736e8;
+}
+
+/* COURSES */
+.courses {
+    background: #f8f7ff;
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
 .card {
     background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    padding: 32px 28px;
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.07);
     transition: 0.3s;
 }
 
@@ -158,17 +200,27 @@ section {
 }
 
 .card h3 {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: #382080;
+    font-size: 22px;
 }
 
 .card p {
     color: #666;
+    margin-bottom: 18px;
 }
 
+.learn-link {
+    color: #6736e8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* TRAINING */
 .training {
-    background: linear-gradient(135deg, #21104f, #43218a);
+    background: linear-gradient(135deg, #21104f, #49228f);
     color: white;
+    text-align: center;
 }
 
 .training .section-title p {
@@ -176,12 +228,11 @@ section {
 }
 
 .training-card {
-    max-width: 800px;
+    max-width: 850px;
     margin: auto;
     background: rgba(255,255,255,0.1);
-    padding: 40px;
+    padding: 42px 30px;
     border-radius: 25px;
-    text-align: center;
 }
 
 .training-card h3 {
@@ -194,54 +245,75 @@ section {
     margin-bottom: 25px;
 }
 
-.portfolio {
-    background: #f8f7ff;
-}
-
-.portfolio-card {
-    text-align: center;
-}
-
-.cta {
-    text-align: center;
+/* CONTACT */
+.contact {
     background: white;
+    text-align: center;
 }
 
-.cta h2 {
-    font-size: 40px;
+.contact-box {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-box h2 {
+    font-size: 38px;
     margin-bottom: 15px;
 }
 
-.cta p {
-    max-width: 650px;
-    margin: 0 auto 25px;
+.contact-box p {
     color: #666;
+    margin-bottom: 25px;
 }
 
+/* FOOTER */
 footer {
     background: #15121f;
     color: white;
     text-align: center;
-    padding: 30px 15px;
+    padding: 32px 15px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
 }
 
 footer p {
     color: #bbb;
+    font-size: 14px;
 }
 
-@media (max-width: 700px) {
+/* MOBILE */
+@media (max-width: 750px) {
+
     header {
         padding: 15px 5%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
     }
 
     nav a {
-        margin-left: 8px;
         font-size: 13px;
     }
 
     .hero {
         min-height: 80vh;
         padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
     }
 
     .hero p {
@@ -256,8 +328,18 @@ footer p {
         font-size: 30px;
     }
 
-    .cta h2 {
-        font-size: 30px;
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about-highlight {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+        margin-right: 0;
     }
 }
 </style>
@@ -266,20 +348,28 @@ footer p {
 <body>
 
 <header>
+
     <div class="logo">Maria AI Academy</div>
 
     <nav>
         <a href="#about">About</a>
         <a href="#courses">Courses</a>
-        <a href="#portfolio">Work</a>
+        <a href="#training">Training</a>
         <a href="#contact">Contact</a>
     </nav>
+
 </header>
 
+
+<!-- HERO -->
+
 <section class="hero">
+
     <div class="hero-content">
 
-        <div class="badge">AI Education • Creativity • Digital Skills</div>
+        <div class="badge">
+            AI Education • Creativity • Digital Skills
+        </div>
 
         <h1>
             Create Better.<br>
@@ -287,89 +377,218 @@ footer p {
         </h1>
 
         <p>
-            Welcome to Maria AI Academy — a place where creativity meets
-            artificial intelligence. Learn how to create stunning AI images,
-            videos, prompts and digital content with confidence.
+            Welcome to Maria AI Academy — where creativity meets
+            artificial intelligence. Learn how to create stunning
+            AI images, videos, prompts and digital content with confidence.
         </p>
 
-        <a href="#courses" class="btn primary">Explore Courses</a>
-        <a href="#about" class="btn secondary">Learn More</a>
+        <a href="#courses" class="btn primary">
+            Explore Courses
+        </a>
+
+        <a href="#about" class="btn secondary">
+            Learn More
+        </a>
 
     </div>
+
 </section>
+
+
+<!-- ABOUT -->
 
 <section id="about" class="about">
 
     <div class="section-title">
-        <h2>Welcome to Maria AI Academy</h2>
-        <p>Creating with AI. Teaching with Purpose.</p>
+
+        <h2>About Maria AI Academy</h2>
+
+        <p>
+            Creating with AI. Teaching with Purpose.
+        </p>
+
     </div>
 
     <div class="about-box">
+
         <p>
-            Maria AI Academy helps beginners, creators, entrepreneurs and
-            digital professionals understand and use AI creatively.
-            Our goal is simple: make AI easier to understand and easier
-            to use in real-world creative projects.
+            Maria AI Academy is a creative learning platform designed
+            to help beginners, content creators, entrepreneurs and
+            digital professionals learn how to use artificial intelligence
+            effectively.
         </p>
+
+        <p>
+            We believe AI should not replace creativity — it should
+            empower it. Our training focuses on practical skills that
+            you can use to create, grow and build digital opportunities.
+        </p>
+
+        <div class="about-highlight">
+
+            <div class="highlight">
+                <strong>AI</strong>
+                Creative Technology
+            </div>
+
+            <div class="highlight">
+                <strong>Learn</strong>
+                Practical Training
+            </div>
+
+            <div class="highlight">
+                <strong>Create</strong>
+                Real Projects
+            </div>
+
+        </div>
+
     </div>
 
 </section>
 
-<section id="courses">
+
+<!-- COURSES -->
+
+<section id="courses" class="courses">
 
     <div class="section-title">
-        <h2>What You Can Learn</h2>
-        <p>Practical AI skills designed for today's digital world.</p>
+
+        <h2>Explore Our Courses</h2>
+
+        <p>
+            Learn practical AI skills and turn your ideas into reality.
+        </p>
+
     </div>
 
     <div class="cards">
 
         <div class="card">
+
             <div class="icon">🎨</div>
-            <h3>AI Image Creation</h3>
+
+            <h3>AI Image Creation Mastery</h3>
+
             <p>
-                Learn how to create professional AI images using powerful
-                prompts, composition, lighting, styling and consistency techniques.
+                Learn professional AI image creation, prompting,
+                facial consistency, lighting, composition, styling,
+                camera angles and more.
             </p>
+
+            <a href="#training" class="learn-link">
+                Learn More →
+            </a>
+
         </div>
 
+
         <div class="card">
+
             <div class="icon">🎬</div>
+
             <h3>AI Video Creation</h3>
+
             <p>
-                Learn how to turn ideas and images into engaging AI-generated
-                videos and visual stories.
+                Learn how to transform ideas and images into engaging
+                AI-generated videos, advertisements and visual stories.
             </p>
+
+            <a href="#training" class="learn-link">
+                Learn More →
+            </a>
+
         </div>
 
+
         <div class="card">
+
             <div class="icon">✍️</div>
+
             <h3>AI Prompting</h3>
+
             <p>
-                Understand how to write better prompts that give you more
-                accurate, creative and professional results.
+                Learn how to write powerful prompts that give you
+                more accurate, creative and professional AI results.
             </p>
+
+            <a href="#training" class="learn-link">
+                Learn More →
+            </a>
+
         </div>
 
+
         <div class="card">
+
             <div class="icon">💼</div>
+
             <h3>AI for Business</h3>
+
             <p>
-                Discover practical ways to use AI for content creation,
-                marketing, advertising and digital business.
+                Discover how AI can help with advertising, content
+                creation, branding, marketing and digital business.
             </p>
+
+            <a href="#training" class="learn-link">
+                Learn More →
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📱</div>
+
+            <h3>AI Content Creation</h3>
+
+            <p>
+                Learn how to create engaging social media content
+                using AI tools and creative workflows.
+            </p>
+
+            <a href="#training" class="learn-link">
+                Learn More →
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🚀</div>
+
+            <h3>AI Creator Skills</h3>
+
+            <p>
+                Build the skills you need to confidently use AI
+                as part of your creative and digital journey.
+            </p>
+
+            <a href="#training" class="learn-link">
+                Learn More →
+            </a>
+
         </div>
 
     </div>
 
 </section>
 
-<section class="training">
+
+<!-- TRAINING -->
+
+<section id="training" class="training">
 
     <div class="section-title">
+
         <h2>AI Image Creation Mastery</h2>
-        <p>Your journey from beginner to confident AI creator.</p>
+
+        <p>
+            Your journey from beginner to confident AI creator.
+        </p>
+
     </div>
 
     <div class="training-card">
@@ -377,73 +596,59 @@ footer p {
         <h3>Learn. Practice. Create.</h3>
 
         <p>
-            Our AI Image Creation Mastery program takes you through prompting,
-            facial consistency, camera angles, lenses, lighting, composition,
-            outfit styling, colour grading, negative prompts and practical
-            assignments.
+            Our comprehensive AI Image Creation Mastery program
+            covers prompting fundamentals, facial consistency,
+            camera angles and lenses, lighting, composition,
+            outfit styling, colour grading, negative prompts
+            and practical assignments.
         </p>
 
-        <a href="#contact" class="btn primary">Join the Training</a>
+        <a href="#contact" class="btn primary">
+            Join the Training
+        </a>
 
     </div>
 
 </section>
 
-<section id="portfolio" class="portfolio">
 
-    <div class="section-title">
-        <h2>Creative Portfolio</h2>
-        <p>AI-powered creativity in action.</p>
-    </div>
+<!-- CONTACT -->
 
-    <div class="cards">
+<section id="contact" class="contact">
 
-        <div class="card portfolio-card">
-            <div class="icon">📸</div>
-            <h3>AI Portraits</h3>
-            <p>Professional and creative AI-generated portraits.</p>
-        </div>
+    <div class="contact-box">
 
-        <div class="card portfolio-card">
-            <div class="icon">📢</div>
-            <h3>Business Adverts</h3>
-            <p>Creative visuals designed for brands and businesses.</p>
-        </div>
+        <h2>Ready to Create With AI?</h2>
 
-        <div class="card portfolio-card">
-            <div class="icon">🛍️</div>
-            <h3>Product Advertising</h3>
-            <p>Eye-catching AI visuals for products and services.</p>
-        </div>
+        <p>
+            Start your AI journey with Maria AI Academy and learn
+            how to turn your ideas into powerful digital creations.
+        </p>
+
+        <a href="mailto:your@email.com" class="btn primary">
+            Contact Maria AI Academy
+        </a>
 
     </div>
 
 </section>
 
-<section id="contact" class="cta">
 
-    <h2>Ready to Create With AI?</h2>
-
-    <p>
-        Whether you're just starting your AI journey or you're ready to
-        improve your creative skills, Maria AI Academy is here to help.
-    </p>
-
-    <a href="mailto:your@email.com" class="btn primary">
-        Contact Maria AI Academy
-    </a>
-
-</section>
+<!-- FOOTER -->
 
 <footer>
 
     <h3>Maria AI Academy</h3>
 
-    <p>Creating with AI. Teaching with Purpose.</p>
+    <p>
+        Creating with AI. Teaching with Purpose.
+    </p>
 
-    <p>© 2026 Maria AI Academy. All Rights Reserved.</p>
+    <p>
+        © 2026 Maria AI Academy. All Rights Reserved.
+    </p>
 
 </footer>
 
 </body>
-  </html>
+</html>
